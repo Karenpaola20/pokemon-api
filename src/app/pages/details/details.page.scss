@@ -1,0 +1,91 @@
+
+ion-card {
+  margin: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.5);
+  border-radius: 50%;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+li {
+  background: #f4f4f4;
+  margin: 8px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3880ff;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+li:hover {
+  background-color: #e8e8e8;
+}
+
+li.type-fire {
+  border-left-color: #ff7b25;
+}
+
+li.type-water {
+  border-left-color: #3498db;
+}
+
+li.type-grass {
+  border-left-color: #2ecc71;
+}
+
+li.type-electric {
+  border-left-color: #f1c40f;
+}
+
+li.type-psychic {
+  border-left-color: #9b59b6;
+}
+
+li.type-normal {
+  border-left-color: #95a5a6;
+}
+
+
+li strong {
+  color: #3880ff;
+  margin-right: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ion-card, li {
+  animation: fadeIn 0.5s ease forwards;
+}
+  

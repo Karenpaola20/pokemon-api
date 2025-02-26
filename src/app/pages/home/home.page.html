@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Pokémon</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/about"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    (ionInput)="filterPokemons()"
+    placeholder="Buscar Pokémon..."
+  ></ion-searchbar>
+
+ 
+  <ion-list>
+    <ion-item *ngFor="let pokemon of filteredPokemons" [routerLink]="['/details', pokemon.name]" class="pokemon-item">
+      {{ pokemon.name | titlecase }}
+    </ion-item>
+  </ion-list>
+</ion-content>
